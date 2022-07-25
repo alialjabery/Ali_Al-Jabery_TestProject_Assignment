@@ -1,0 +1,656 @@
+id: M8dHzScy5k-ug0ufZr3hfQ
+projectId: GzXCKaMi_0egkabUw2dgGA
+projectName: My first Project
+created: 2022-07-25T06:46:45.8818846Z
+owner: Ali Al-Jabery
+protocol: 1
+tests:
+- id: lqP8PHYLLkiAQMOnaD1lVg
+  name: Collect
+  description: ''
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-07-24T15:43:31.0000000
+  modificationDate: 2022-07-25T06:38:10.0000000
+  settings:
+    automationAssistant: true
+    appId: x4Se-49E1UivOBzPK1a3_w
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: x4Se-49E1UivOBzPK1a3_w
+    name: marketcap.com
+    url: https://coinmarketcap.com/currencies/permission-coin/
+    platform: Web
+  steps:
+  - id: tYp0ue_Ow0Wu-IEPjWspQQ
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: pjr55DG25kq7dYPjv_AWMg
+    comments: collects the contract address from coinmarketcap and adds it to a parameter
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Action
+    elementId: L6ysoq4v5kCnOqEkvB94tA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{coinmarketcapcontract}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: H5Nk0ZAHLEuPhDSpI28eJw
+    comments: collects the maximum supply from coinmarketcap for and adds it to a parameter.
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: QD9fPOEyWESHnGS9LqaGtw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{maxsupplymarketcap}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: NHFkK_CKZk2QoTFg_tZp-A
+    comments: collects circulating supply data from coinmarketcap and adds it to a parameter
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: XXPZNXmqHke7VDtKRUZhMQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{circulatingsupplymarketcap}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: u6PjSB4_sU-y69SeRWFvVA
+    comments: navigates test to polygonscan for data collection
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: https://polygonscan.com/token/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff#readContract
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: VloUWpFjYEqy27TnsJHV3Q
+    comments: collects contract address from polyscan and adds it to a parameter.
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: xCeiZS8VOUuTlwEVMsI6Gg
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{polyscancontractadd}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: e1w3UcxAlEW6-_vzG4vBRg
+    comments: collects the circulating supply data from polyscan and adds it to a parameter.
+    enabled: true
+    invertResult: false
+    order: 7
+    repeat: 1
+    type: Action
+    elementId: zKZFdcCxx0WZKIm3WfWioA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{circulatingsupplypolyscan}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: n0y2nVOStEypbDQ2x3lPCA
+    comments: collects maximum supply data from polyscan and adds it to a parameter.
+    enabled: true
+    invertResult: false
+    order: 8
+    repeat: 1
+    type: Action
+    elementId: P2V073h8Ek2XnnA5A88S8A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{maxsupplypolyscan}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: -T7XaSOLt0y25PiTpavOAw
+    comments: compares the coinmarketcap contract address against the polyscan contract address and returns the result.
+    enabled: true
+    invertResult: false
+    order: 9
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: F3vMHtIjm0i4qlxqJvNDxg
+      source: Store
+      addonId: D5P7e9ZMO0aPwXNrWJE9iA
+    parameterMaps:
+    - name: firstString
+      value: '{{polyscancontractadd}}'
+      direction: Input
+    - name: secondString
+      value: '{{coinmarketcapcontract}}'
+      direction: Input
+    - name: ignoreCase
+      value: ''
+      direction: Input
+    - name: result
+      value: '{{contractresult}}'
+      direction: Output
+    - name: expectedResult
+      value: 0
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 8ZlebS-OD0qFs8J5wH1S0w
+    comments: compares the circulating supply from coin market cap against the data from polyscan and returns the result.
+    enabled: true
+    invertResult: false
+    order: 10
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: F3vMHtIjm0i4qlxqJvNDxg
+      source: Store
+      addonId: D5P7e9ZMO0aPwXNrWJE9iA
+    parameterMaps:
+    - name: firstString
+      value: '{{circulatingsupplypolyscan}}'
+      direction: Input
+    - name: secondString
+      value: '{{circulatingsupplymarketcap}}'
+      direction: Input
+    - name: ignoreCase
+      value: ''
+      direction: Input
+    - name: result
+      value: '{{circulatingsupplyresult}}'
+      direction: Output
+    - name: expectedResult
+      value: 0
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 9LhNKBWyEEGRgobQbWIUFA
+    comments: compares the maximum supply data from coinmarketcap against the maximum supply polyscan data and returns the result.
+    enabled: true
+    invertResult: false
+    order: 11
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: F3vMHtIjm0i4qlxqJvNDxg
+      source: Store
+      addonId: D5P7e9ZMO0aPwXNrWJE9iA
+    parameterMaps:
+    - name: firstString
+      value: '{{maxsupplymarketcap}}'
+      direction: Input
+    - name: secondString
+      value: '{{maxsupplypolyscan}}'
+      direction: Input
+    - name: ignoreCase
+      value: ''
+      direction: Input
+    - name: result
+      value: '{{maxsupplyresult}}'
+      direction: Output
+    - name: expectedResult
+      value: 0
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: LJJibzQMiUm2MMa__XjWXQ
+    comments: navigates to the transactions page of permission coin on polyscan to begin search for specific transaction
+    enabled: true
+    invertResult: false
+    order: 12
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: https://polygonscan.com/token/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: j9MK9kQH-022QKEIH6NEkA
+    comments: start search
+    enabled: true
+    invertResult: false
+    order: 13
+    repeat: 1
+    type: Action
+    elementId: w4uyKxupYE6CsK-9UJJLKA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: gdU4oEbBskWr1MCBmIqeyw
+    comments: search for specific transaction
+    enabled: true
+    invertResult: false
+    order: 14
+    repeat: 1
+    type: Action
+    elementId: Q-LkPzaKYkSwb9V5kuyfqw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: '{{TransactionHash}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: b0nWZHQXSEKX77xXKd6iVw
+    comments: complete search
+    enabled: true
+    invertResult: false
+    order: 15
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: aHcbscfJy0-4s_18gJFMrA
+      source: Store
+      addonId: 0rh9jv9ymUKPQa2rcpPE4g
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: I-rPmt4yUUOR1JpoUqRCrQ
+    comments: 'this step will select the first result if it matches the search tag. '
+    enabled: true
+    invertResult: false
+    order: 16
+    repeat: 1
+    type: Action
+    elementId: SixCQP_e3E-zc4wQkO7mFQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: a59f3a20-d08d-4293-9add-b279f92e6c41
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Fw7MXBlAxUmcL32xmz5Sjg
+    comments: collects the status of the transaction and returns the result.
+    enabled: true
+    invertResult: false
+    order: 17
+    repeat: 1
+    type: Action
+    elementId: 5aUGsbrPXkSKJt5cTLx9KQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{status}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://coinmarketcap.com/currencies/permission-coin/
+    type: Input
+  - name: coinmarketcapcontract
+    description: ''
+    value: ''
+    type: Input
+  - name: polyscancontractadd
+    description: ''
+    value: ''
+    type: Input
+  - name: contractresult
+    description: ''
+    value: ''
+    type: Output
+  - name: circulatingsupplymarketcap
+    description: ''
+    value: ''
+    type: Input
+  - name: maxsupplymarketcap
+    description: ''
+    value: ''
+    type: Input
+  - name: maxsupplypolyscan
+    description: ''
+    value: ''
+    type: Input
+  - name: circulatingsupplypolyscan
+    description: ''
+    value: ''
+    type: Input
+  - name: circulatingsupplyresult
+    description: ''
+    value: ''
+    type: Output
+  - name: maxsupplyresult
+    description: ''
+    value: ''
+    type: Output
+  - name: TransactionHash
+    description: ''
+    value: ''
+    type: Input
+  - name: status
+    description: ''
+    value: ''
+    type: Output
+auxTests: []
+elements:
+- id: L6ysoq4v5kCnOqEkvB94tA
+  name: contracts
+  description: copy contracts address
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.eMxKgr.container > div.n78udj-0.jskEGI > div > div.sc-16r8icm-0.hMKivi.linksSection > div > div.sc-16r8icm-0.sc-10up5z1-1.gGKCJe.contractsRow > div.content > div > a'
+    priority: 0
+- id: xCeiZS8VOUuTlwEVMsI6Gg
+  name: polyscancontractadd
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <a class="text-truncate d-block mr-2" href="/address/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff">0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff</a>
+    priority: 0
+- id: XXPZNXmqHke7VDtKRUZhMQ
+  name: circulating supply marketcap
+  description: the circulating supply cell under the information tab
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div:nth-child(1) > div.sc-16r8icm-0.sc-19zk94m-1.gRSJaB > div:nth-child(3) > div > div.sc-16r8icm-0.hgKnTV > section > div > div.sc-16r8icm-0.kjciSH.show > div:nth-child(3) > table > tbody > tr:nth-child(1) > td'
+    priority: 0
+- id: QD9fPOEyWESHnGS9LqaGtw
+  name: max supply marketcap
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#__next > div.bywovg-1.fUzJes > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div:nth-child(1) > div.sc-16r8icm-0.sc-19zk94m-1.gRSJaB > div:nth-child(3) > div > div.sc-16r8icm-0.hgKnTV > section > div > div.sc-16r8icm-0.kjciSH.show > div:nth-child(3) > table > tbody > tr:nth-child(3) > td'
+    priority: 0
+- id: P2V073h8Ek2XnnA5A88S8A
+  name: maxsupply polyscan
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <a target="_blank" href="/unitconverter?wei=100000000000000000000000000000">100000000000000000000000000000</a>
+    priority: 0
+- id: zKZFdcCxx0WZKIm3WfWioA
+  name: totalsupply
+  description: circulating supply
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <a target="_blank" href="/unitconverter?wei=52439188927840002378722660000">52439188927840002378722660000</a>
+    priority: 0
+- id: Q-LkPzaKYkSwb9V5kuyfqw
+  name: polyscan hash search
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <input class="form-control" type="search" placeholder="Filter Address / Txn Hash / Token ID" name="a" maxlength="100">
+    priority: 0
+- id: w4uyKxupYE6CsK-9UJJLKA
+  name: search bar
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: >-
+      <a id="searchFilterInvoker" class="btn btn-sm btn-icon btn-primary" href="javascript:;" role="button" aria-controls="searchFilter" aria-haspopup="true" aria-expanded="false" data-unfold-target="#searchFilter" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="false" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut">
+
+      <i class="fa fa-search btn-icon__inner"></i>
+
+      </a>
+    priority: 0
+- id: SixCQP_e3E-zc4wQkO7mFQ
+  name: first result
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <td><span class="hash-tag text-truncate"><a href="/tx/0x9f8966ad96974d8eb9f150bd257cd5dde40c7997d9056cfd10ca587b238cb3db" target="_parent">0x9f8966ad96974d8eb9f150bd257cd5dde40c7997d9056cfd10ca587b238cb3db</a></span></td>
+    priority: 0
+- id: 5aUGsbrPXkSKJt5cTLx9KQ
+  name: transaction status
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDM
+    name: Generic Web Element
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: <span class="u-label u-label--sm u-label--success rounded" data-toggle="tooltip" title="" data-original-title="A Status code indicating if the top-level call succeeded or failed (applicable for Post BYZANTIUM blocks only)"><i class="fa fa-check-circle mr-1"></i>Success</span>
+    priority: 0
+projectParameters: []
+addons:
+- id: D5P7e9ZMO0aPwXNrWJE9iA
+  source: Store
+  version: 2.10
+  actions:
+  - id: F3vMHtIjm0i4qlxqJvNDxg
+    name: Compare two strings
+    description: Compares {{firstString}} with {{secondString}}
+    className: CompareTwoStrings
+  minSdkLevel: 2
+  minSdkVersion: 0.65.0
+  sdkGeneration: 1
+  language: Java
+  hash: 6824793E7A01EB296E01FBD3040191C826B9C9F194842B9DBCFA0E766EBF8F1F
+- id: 0rh9jv9ymUKPQa2rcpPE4g
+  source: Store
+  version: 0.5
+  actions:
+  - id: aHcbscfJy0-4s_18gJFMrA
+    name: Press Enter with Robot
+    description: Presses and releases Enter
+    className: io.testproject.robot.operations.PressEnter
+  minSdkLevel: 2
+  minSdkVersion: 0.65.0
+  sdkGeneration: 1
+  language: Java
+  hash: DEF91B722769C1DB8294820F7AB198267108E521D7FEDB77E5E800420E99B8AE
